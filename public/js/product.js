@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const products = window.ZENMART_PRODUCTS || [];
-  const requestedId = new URLSearchParams(window.location.search).get("id");
+  const requestedId = new URLSearchParams(location.search).get("id");
   const product = products.find((item) => item.id === requestedId)
-    || products.find((item) => item.id === "apple-macbook-pro-14");
+    || products.find((item) => item.id === "macbook-pro-16");
   if (!product) {
     throw new Error("No product data is available to render.");
   }
@@ -56,13 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
     quantity.value = Number(quantity.value) + 1;
   });
 
-  const descriptionContent = product.id === "apple-macbook-pro-14"
+  const descriptionContent = product.id === "macbook-pro-16"
     ? `<p>The MacBook Pro combines the Apple M1 Pro chip with a Liquid Retina XDR display, long battery life, and the ports professionals need.</p>
       <h2>Performance and display</h2>
       <ul>
         <li>Apple M1 Pro chip for fast CPU, graphics, and machine learning performance</li>
         <li>16 GB of memory and a 1 TB solid state drive</li>
-        <li>14.2-inch Liquid Retina XDR display</li>
+        <li>16.2-inch Liquid Retina XDR display</li>
         <li>Studio-quality microphones and a high-fidelity speaker system</li>
       </ul>`
     : `<p>${escapeHTML(product.title)} from ${escapeHTML(product.brand)}.</p>`;

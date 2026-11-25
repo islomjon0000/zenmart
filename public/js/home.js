@@ -11,14 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const matchingProduct = products.find((item) => imageName && item.image.split("/").pop() === imageName)
       || products.find((item) => title && (title.includes(item.title) || item.title.includes(title)));
     if (!matchingProduct) return;
+    card.dataset.id = matchingProduct.id;
     card.querySelectorAll("a").forEach((link) => {
       link.href = `product.html?id=${encodeURIComponent(matchingProduct.id)}`;
-    });
-    card.addEventListener("click", (event) => {
-      if (event.target.closest(".hover_box button")) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
     });
   });
 });
