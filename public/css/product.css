@@ -1,0 +1,429 @@
+.breadcrumb {
+  padding: 18px 0;
+  color: #626974;
+  font: 14px "Jost", sans-serif;
+}
+
+.breadcrumb .container {
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumb a {
+  color: #0053f6;
+}
+
+.breadcrumb strong {
+  overflow: hidden;
+  color: #041e42;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product_detail,
+.tabs_section,
+.related_section {
+  display: flex;
+  justify-content: center;
+}
+
+.product_detail {
+  padding: 30px 0 60px;
+}
+
+.product_detail_container {
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.gallery {
+  flex: 1 1 52%;
+  min-width: 0;
+}
+
+.main_image_box {
+  display: flex;
+  min-height: 480px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}
+
+.main_image_box img {
+  display: block;
+  max-width: 100%;
+  max-height: 460px;
+  object-fit: contain;
+}
+
+.thumbnail_list {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.thumbnail_button {
+  width: 76px;
+  height: 76px;
+  padding: 6px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.thumbnail_button.active {
+  border-color: #0053f6;
+}
+
+.thumbnail_button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product_info {
+  flex: 1 1 48%;
+  min-width: 0;
+  color: #041e42;
+  font-family: "Jost", sans-serif;
+}
+
+.product_brand {
+  color: #626974;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.product_info h1 {
+  margin: 8px 0 12px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.product_rating,
+.detail_price,
+.quantity_row,
+.action_row {
+  display: flex;
+  align-items: center;
+}
+
+.product_rating {
+  gap: 10px;
+  color: #626974;
+  font-size: 14px;
+}
+
+.stars {
+  color: #f5c34b;
+  letter-spacing: 2px;
+}
+
+.detail_price {
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.detail_price strong {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.detail_price span,
+.product_card_price span {
+  color: #8a9099;
+  text-decoration: line-through;
+}
+
+.specs_table,
+.description_specs {
+  width: 100%;
+  border-collapse: collapse;
+  font: 14px "Jost", sans-serif;
+}
+
+.specs_table th,
+.specs_table td,
+.description_specs th,
+.description_specs td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #eaeaea;
+  text-align: left;
+}
+
+.specs_table th,
+.description_specs th {
+  width: 38%;
+  color: #626974;
+  font-weight: 500;
+}
+
+.quantity_row {
+  justify-content: space-between;
+  margin: 20px 0;
+  font: 15px "Jost", sans-serif;
+}
+
+.quantity_selector {
+  display: flex;
+  height: 40px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+
+.quantity_selector button,
+.quantity_selector input {
+  width: 42px;
+  border: 0;
+  background: transparent;
+  color: #041e42;
+  text-align: center;
+}
+
+.quantity_selector button {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.quantity_selector input {
+  width: 48px;
+  border-right: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea;
+  font: 15px "Jost", sans-serif;
+}
+
+.action_row {
+  gap: 10px;
+}
+
+.action_row button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font: 500 15px "Jost", sans-serif;
+}
+
+.add_cart,
+.buy_now {
+  padding: 0 24px;
+  background: #0053f6;
+  color: #fff;
+}
+
+.buy_now {
+  background: #f5c34b;
+  color: #041e42;
+}
+
+.product_icon_button {
+  width: 46px;
+  background: #f5f7fa;
+}
+
+.product_icon_button img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.product_meta,
+.delivery_info {
+  margin-top: 22px;
+  color: #626974;
+  font: 14px/1.8 "Jost", sans-serif;
+}
+
+.product_meta p {
+  margin: 4px 0;
+}
+
+.product_meta strong {
+  color: #041e42;
+}
+
+.share_links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.share_links a {
+  color: #041e42;
+}
+
+.delivery_info {
+  padding: 14px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+
+.delivery_info div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.delivery_info img {
+  width: 20px;
+  height: 20px;
+}
+
+.tabs_section {
+  padding: 36px 0;
+  background: #f7f8fa;
+}
+
+.tabs_section .container,
+.related_section .container {
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.tabs button {
+  padding: 12px 14px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #626974;
+  cursor: pointer;
+  font: 15px "Jost", sans-serif;
+}
+
+.tabs button.active {
+  border-color: #0053f6;
+  color: #041e42;
+}
+
+.tab_content {
+  padding: 24px 0;
+  color: #626974;
+  font: 15px/1.7 "Jost", sans-serif;
+}
+
+.tab_content h2 {
+  color: #041e42;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.tab_content li {
+  margin: 6px 0;
+}
+
+.related_section {
+  padding: 40px 0;
+}
+
+.related_section .category_top {
+  margin-bottom: 20px;
+}
+
+.card_row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.product_card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  font-family: "Jost", sans-serif;
+}
+
+.product_card a {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: #041e42;
+}
+
+.product_card_image {
+  display: grid;
+  height: 170px;
+  place-items: center;
+}
+
+.product_card_image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product_card_brand,
+.product_card_rating small {
+  margin-top: 10px;
+  color: #626974;
+  font-size: 13px;
+}
+
+.product_card_title {
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.product_card_rating {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.product_card_rating span {
+  color: #f5c34b;
+}
+
+.product_card_price {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+@media (max-width: 1360px) {
+  .product_detail_container,
+  .tabs_section .container,
+  .related_section .container,
+  .breadcrumb .container {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 760px) {
+  .product_detail_container {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .gallery,
+  .product_info {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .main_image_box {
+    min-height: 300px;
+  }
+
+  .main_image_box img {
+    max-height: 280px;
+  }
+
+  .product_info h1 {
+    font-size: 23px;
+  }
+}

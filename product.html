@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chosen Product | Zenmart</title>
+  <link rel="stylesheet" href="public/css/command.css">
+  <link rel="stylesheet" href="public/css/product.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+  <header class="navbar_frame">
+    <div class="container">
+      <div class="navbar_top">
+        <a class="header_logo" href="index.html"><img src="public/images/icons/logo.png" alt="Zenmart"></a>
+        <div class="nav_search_frame">
+          <div class="search_box">
+            <div class="category_list"><select><option selected>All Categories</option><option>Computer</option></select></div>
+            <input type="text" placeholder="Search products...">
+          </div>
+          <div class="search_icon_box"><img src="public/images/icons/search.svg" alt=""></div>
+        </div>
+        <div class="nav_top_menu">
+          <div class="top_menu_box"><div class="box_icon_box"><img src="public/images/icons/heart.svg" alt=""></div><div class="box_info_box"><span>Wishlist</span><strong>My Items</strong></div></div>
+          <div class="top_menu_box"><div class="box_icon_box"><img src="public/images/icons/profile.svg" alt=""></div><div class="box_info_box"><span>Sign In</span><strong>Account</strong></div></div>
+          <div class="top_menu_box"><div class="box_icon_box"><div class="basket_count">2</div><img src="public/images/icons/shopping-cart.svg" alt=""></div><div class="box_info_box"><span>$200</span><strong>Total</strong></div></div>
+        </div>
+      </div>
+      <div class="navbar_bott">
+        <div class="navbar_bott_menu_box">
+          <div class="browse_box"><img src="public/images/icons/browse.svg" alt=""><span>Browse Categories</span></div>
+          <nav class="navbar_route_menu"><a href="index.html" class="title">Home</a><a href="">Shop</a><a href="">Orders</a><a href="">About</a><a href="">Contact</a></nav>
+          <div class="sorting_menu"><span>Deal of the Day</span><span>Hot Deals</span><span>Best Sellers</span><span>New Arrivals</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="breadcrumb"><div class="container"><a href="index.html">Home</a><span>/</span><span id="breadcrumbCategory">Electronics</span><span>/</span><strong id="breadcrumbProduct">Product</strong></div></div>
+    <section class="product_detail">
+      <div class="container product_detail_container">
+        <div class="gallery">
+          <div class="main_image_box"><img id="mainProductImage" src="" alt=""></div>
+          <div class="thumbnail_list" id="thumbnailList" aria-label="Product images"></div>
+        </div>
+        <div class="product_info">
+          <span id="productBrand" class="product_brand"></span>
+          <h1 id="productTitle"></h1>
+          <div class="product_rating"><div class="stars">★★★★★</div><span id="reviewCount"></span></div>
+          <div class="detail_price"><strong id="productPrice"></strong><span id="productOldPrice"></span></div>
+          <table class="specs_table"><tbody id="specsList"></tbody></table>
+          <div class="quantity_row"><span>Quantity</span><div class="quantity_selector"><button id="decreaseQty" type="button">−</button><input id="quantity" type="number" value="1" min="1"><button id="increaseQty" type="button">+</button></div></div>
+          <div class="action_row"><button class="add_cart" type="button">Add to cart</button><button class="buy_now" type="button">Buy now</button><button class="product_icon_button" type="button" aria-label="Add to wishlist"><img src="public/images/icons/wishlist_icon.svg" alt=""></button><button class="product_icon_button" type="button" aria-label="Compare product"><img src="public/images/icons/statistics.svg" alt=""></button></div>
+          <div class="product_meta">
+            <p>SKU: <strong id="productSku"></strong></p>
+            <p>Categories: <span>Apple Macbook, Laptop, Computer</span></p>
+            <p>Tags: <span>apple, technologies, macbook</span></p>
+            <div class="share_links"><span>Share:</span><a href="#" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Share on Twitter"><i class="fa-brands fa-twitter"></i></a><a href="#" aria-label="Share on Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+          </div>
+          <div class="delivery_info">
+            <div><img src="public/images/icons/truck.svg" alt=""><span>Free Shipping &amp; Returns: On all orders over $200.00</span></div>
+            <div><img src="public/images/icons/export_shop.svg" alt=""><span>Sold and shipped by TFN-STORE | TUFAN STORE LLC Fulfilled by Zenmart</span></div>
+            <div><img src="public/images/icons/return-box.svg" alt=""><span>Free 15-Day returns <a href="#">Details</a></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tabs_section">
+      <div class="container">
+        <div class="tabs" role="tablist">
+          <button class="active" type="button" data-tab="description">Description</button>
+          <button type="button" data-tab="specs">Details &amp; Specs</button>
+          <button type="button" data-tab="included">What's Included</button>
+          <button type="button" data-tab="vendor">Vendor</button>
+          <button type="button" data-tab="returns">Return Policy</button>
+          <button type="button" data-tab="questions">Questions and Answers</button>
+          <button type="button" data-tab="reviews">Customer Reviews</button>
+        </div>
+        <div class="tab_content" id="tabContent">
+          <h2>Description</h2>
+          <p id="productDescription"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="related_section"><div class="container"><div class="category_top"><span>Related products</span><a href="">View All</a></div><div class="card_row" id="relatedProducts"></div></div></section>
+    <section class="related_section"><div class="container"><div class="category_top"><span>You may also like</span><a href="">View All</a></div><div class="card_row" id="likeProducts"></div></div></section>
+  </main>
+
+  <footer class="footer_frame">
+    <div class="container">
+      <div class="footer_top">
+        <div class="footer_contact_box"><span class="footer_contact_title">Contact Us</span><div class="footer_contact_main"><img src="public/images/icons/phone-call.svg" alt=""><div><strong>Monday-Friday: 08am-9pm</strong><span>+(1) 123 456 7890</span></div></div><div class="footer_contact_main"><img src="public/images/icons/email.svg" alt=""><div><strong>Need help with your order?</strong><span>support@zenmart.com</span></div></div></div>
+        <div class="footer_support_box"><span class="footer_contact_title">Customer Support</span><a href="">Contact Us</a><a href="">Help Centre</a><a href="">Returns & Exchanges</a><a href="">Best Buy Financing</a><a href="">Best Buy Gift Card</a></div>
+        <div class="footer_support_box"><span class="footer_contact_title">Services</span><a href="">Geek Squad</a><a href="">In-Home Advisor</a><a href="">Trade-In Program</a><a href="">Electronics Recycling</a><a href="">Best Buy Health</a></div>
+        <div class="footer_media_box">
+          <div class="footer_media_main"><span class="footer_contact_title">Follow us</span><div><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-linkedin"></i></div></div>
+          <div class="footer_media_main" style="margin-top: 30px">
+            <span class="footer_contact_title">Mobile Apps</span>
+            <div class="mobile_app_box"><i class="fa-brands fa-apple"></i><span>iOS App</span></div>
+            <div class="mobile_app_box"><i class="fa-brands fa-android"></i><span>Android App</span></div>
+          </div>
+        </div>
+        <div class="footer_media_box"><div class="footer_media_main"><span class="footer_contact_title">We accept</span><div class="card_box"><img src="public/images/icons/visa.png" alt=""><img src="public/images/icons/master_card.png" alt=""><img src="public/images/icons/apple_pay.png" alt=""><img src="public/images/icons/dicvover.png" alt=""><img src="public/images/icons/paypal.png" alt=""><img src="public/images/icons/amex.png" alt=""></div></div></div>
+      </div>
+      <div class="footer_bottom"><div class="footer_main"><div class="footer_bottom_left"><span>© 2022 Zenmart. All Rights Reserved</span><span style="margin-left: 60px;">Privacy · Terms · Sitemap</span></div><div class="footer_bottom_right"><div class="footer_select_box"><span>Currency</span><select><option selected>USD</option></select></div><div class="footer_select_box" style="margin-left: 25px;"><span>Language</span><select><option selected>English</option></select></div></div></div></div>
+    </div>
+  </footer>
+  <script src="public/js/products.js"></script>
+  <script src="public/js/product.js"></script>
+</body>
+</html>
