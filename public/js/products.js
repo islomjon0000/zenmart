@@ -33,10 +33,22 @@ const products = [
   },
   { id: "asus-vivobook", brand: "ASUS", title: "ASUS VivoBook Laptop", price: 899, oldPrice: 999, image: "public/images/products/asus_laptop.png", reviews: "84" },
   { id: "acer-aspire", brand: "Acer", title: "Acer Aspire Laptop", price: 749, oldPrice: 849, image: "public/images/products/acer_laptop.png", reviews: "62" },
+  { id: "acer-aspire-5", brand: "Acer", title: "Acer Aspire 5 Laptop", price: 799, oldPrice: 899, image: "public/images/products/acer_laptop.png", reviews: "54" },
   { id: "acer-silver", brand: "Acer", title: "Acer Laptop - Silver", price: 699, oldPrice: 799, image: "public/images/products/acer_silver.png", reviews: "47" },
   { id: "sony-laptop", brand: "Sony", title: "Sony Laptop", price: 1099, oldPrice: 1199, image: "public/images/products/sony_laptop.png", reviews: "39" },
   { id: "acer-nitro", brand: "Acer", title: "Acer Nitro Gaming Laptop", price: 1199, oldPrice: 1299, image: "public/images/products/nitro_laptop.png", reviews: "91" },
   { id: "rog-laptop", brand: "ASUS ROG", title: "ASUS ROG Gaming Laptop", price: 1499, oldPrice: 1699, image: "public/images/products/rolex_laptop.png", reviews: "73" }
+];
+
+const laptopIds = [
+  "macbook-pro-16",
+  "asus-vivobook",
+  "acer-aspire",
+  "acer-silver",
+  "sony-notebook",
+  "sony-laptop",
+  "acer-nitro",
+  "rog-laptop"
 ];
 
 window.ZENMART_PRODUCTS = products.map((product) => ({
@@ -48,3 +60,4 @@ window.ZENMART_PRODUCTS = products.map((product) => ({
     ["Price", `$${product.price.toLocaleString("en-US", { maximumFractionDigits: 2 })}`]
   ]
 }));
+window.ZENMART_LAPTOP_IDS = [...laptopIds, "acer-aspire-5"];

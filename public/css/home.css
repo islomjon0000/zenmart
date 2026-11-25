@@ -785,6 +785,135 @@
   align-items: center;
 }
 
+.tv_frame .tv_wrapper {
+  gap: 12px;
+  align-items: stretch;
+}
+
+.tv_frame .tv_wrapper .next_prev_box {
+  display: flex;
+  flex: 0 0 25px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tv_frame .tv_wrapper .next_prev_box[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.tv_frame .tv_wrapper .next_prev_box img {
+  position: static;
+}
+
+.tv_frame .tv_product_boxes {
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+  height: 452px;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.tv_frame .tv_product_boxes::-webkit-scrollbar {
+  display: none;
+}
+
+.tv_frame .tv_product_boxes .tv_product_box {
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - 36px) / 4);
+  width: auto;
+  min-width: 0;
+  align-items: stretch;
+  scroll-snap-align: start;
+}
+
+.tv_frame .tv_product_box .product_img {
+  flex: 0 0 280px;
+}
+
+.tv_frame .tv_product_box .product_img img {
+  max-width: 90%;
+  max-height: 250px;
+  object-fit: contain;
+}
+
+.tv_frame .tv_product_box .product_content_box {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tv_frame .product_content_box .product_desc {
+  display: -webkit-box;
+  height: auto;
+  min-height: 56px;
+  max-height: 56px;
+  margin-top: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.tv_frame .product_content_box .review_box {
+  margin-top: 0;
+}
+
+.tv_frame .product_content_box .price_box {
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.tv_frame .pagination_dot .dot {
+  cursor: pointer;
+}
+
+.tv_frame .pagination_dot .dot.active {
+  cursor: default;
+}
+
+.tv_frame .pagination_main > img[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+@media (max-width: 1360px) {
+  .tv_frame .container {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 900px) {
+  .tv_frame .tv_product_boxes .tv_product_box {
+    flex-basis: calc((100% - 12px) / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .tv_frame .container {
+    width: calc(100% - 32px);
+  }
+
+  .tv_frame .tv_wrapper {
+    gap: 8px;
+  }
+
+  .tv_frame .tv_wrapper .next_prev_box {
+    flex-basis: 20px;
+  }
+
+  .tv_frame .tv_product_boxes .tv_product_box {
+    flex-basis: 100%;
+  }
+}
+
 .home_page .event_frame {
   position: relative;
   margin-top: 90px;

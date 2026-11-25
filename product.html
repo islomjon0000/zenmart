@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chosen Product | Zenmart</title>
   <link rel="stylesheet" href="public/css/command.css">
+  <link rel="stylesheet" href="public/css/home.css">
   <link rel="stylesheet" href="public/css/product.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +33,7 @@
       <div class="navbar_bott">
         <div class="navbar_bott_menu_box">
           <div class="browse_box"><img src="public/images/icons/browse.svg" alt=""><span>Browse Categories</span></div>
-          <nav class="navbar_route_menu"><a href="index.html" class="title">Home</a><a href="">Shop</a><a href="">Orders</a><a href="">About</a><a href="">Contact</a></nav>
+          <nav class="navbar_route_menu"><a href="index.html" class="title">Home</a><a href="product.html?id=macbook-pro-16">Shop</a><a href="order/cart.html">Orders</a><a href="other/about.html">About</a><a href="other/contact.html">Contact</a></nav>
           <div class="sorting_menu"><span>Deal of the Day</span><span>Hot Deals</span><span>Best Sellers</span><span>New Arrivals</span></div>
         </div>
       </div>
@@ -88,8 +89,40 @@
       </div>
     </section>
 
-    <section class="related_section"><div class="container"><div class="category_top"><span>Related products</span><a href="">View All</a></div><div class="card_row" id="relatedProducts"></div></div></section>
-    <section class="related_section"><div class="container"><div class="category_top"><span>You may also like</span><a href="">View All</a></div><div class="card_row" id="likeProducts"></div></div></section>
+    <section class="related_section tv_frame" aria-label="Related laptop products">
+      <div class="container">
+        <div class="category_top"><span>Related products</span><a href="product/all.html">View All</a></div>
+        <div class="tv_wrapper">
+          <div class="next_prev_box"><img src="public/images/icons/next.svg" alt=""></div>
+          <div class="tv_product_boxes" id="relatedProducts" aria-label="Related laptops"></div>
+          <div class="next_prev_box" style="transform: scaleX(-1);"><img src="public/images/icons/next.svg" alt=""></div>
+        </div>
+        <div class="pagionation_box">
+          <div class="pagination_main">
+            <img src="public/images/icons/arrow-prev_next.svg" alt="">
+            <div class="pagination_dot" aria-label="Related laptop carousel pages"></div>
+            <img src="public/images/icons/arrow-prev_next.svg" alt="" style="transform: scaleX(-1);">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="related_section tv_frame" aria-label="Recommended laptop products">
+      <div class="container">
+        <div class="category_top"><span>You may also like</span><a href="product/all.html">View All</a></div>
+        <div class="tv_wrapper">
+          <div class="next_prev_box"><img src="public/images/icons/next.svg" alt=""></div>
+          <div class="tv_product_boxes" id="likeProducts" aria-label="Recommended laptops"></div>
+          <div class="next_prev_box" style="transform: scaleX(-1);"><img src="public/images/icons/next.svg" alt=""></div>
+        </div>
+        <div class="pagionation_box">
+          <div class="pagination_main">
+            <img src="public/images/icons/arrow-prev_next.svg" alt="">
+            <div class="pagination_dot" aria-label="Recommended laptop carousel pages"></div>
+            <img src="public/images/icons/arrow-prev_next.svg" alt="" style="transform: scaleX(-1);">
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer_frame">
@@ -113,5 +146,6 @@
   </footer>
   <script src="public/js/products.js"></script>
   <script src="public/js/product.js"></script>
+  <script src="public/js/home.js"></script>
 </body>
 </html>

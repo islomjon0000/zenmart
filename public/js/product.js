@@ -87,20 +87,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const laptopIds = ["asus-vivobook", "acer-aspire", "acer-silver", "sony-laptop", "acer-nitro", "rog-laptop"];
-  const laptops = laptopIds.map((id) => products.find((item) => item.id === id)).filter(Boolean);
+  const laptops = (window.ZENMART_LAPTOP_IDS || [])
+    .filter((id) => id !== product.id)
+    .map((id) => products.find((item) => item.id === id))
+    .filter(Boolean);
   const renderCards = (containerId, items) => {
     document.getElementById(containerId).innerHTML = items.map((item) => `
-      <article class="product_card">
-        <a href="product.html?id=${encodeURIComponent(item.id)}">
-          <div class="product_card_image"><img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.title)}"></div>
-          <span class="product_card_brand">${escapeHTML(item.brand)}</span>
-          <span class="product_card_title">${escapeHTML(item.title)}</span>
-          <div class="product_card_rating"><span aria-label="5 out of 5 stars">★★★★★</span><small>${escapeHTML(item.reviews)} reviews</small></div>
-          <div class="product_card_price"><strong>${formatPrice(item.price)}</strong><span>${formatPrice(item.oldPrice)}</span></div>
-        </a>
-      </article>`).join("");
+      <div class="tv_product_box" data-id="${escapeHTML(item.id)}">
+        <div class="product_img">
+          <a href="product.html?id=${encodeURIComponent(item.id)}"><img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.title)}"></a>
+        </div>
+        <div class="product_content_box">
+          <span class="product_title">${escapeHTML(item.brand)}</span>
+          <a href="product.html?id=${encodeURIComponent(item.id)}"><p class="product_desc">${escapeHTML(item.title)}</p></a>
+          <div class="review_box" aria-label="5 out of 5 stars">
+            ${Array.from({ length: 5 }, () => '<img src="public/images/icons/review.svg" alt="">').join("")}
+            <span>${escapeHTML(item.reviews)} reviews</span>
+          </div>
+          <div class="price_box">
+            <strong>${formatPrice(item.price)}</strong>
+            <span>${formatPrice(item.oldPrice)}</span>
+          </div>
+        </div>
+      </div>`).join("");
   };
-  renderCards("relatedProducts", laptops.slice(0, 5));
-  renderCards("likeProducts", laptops.slice(1).concat(laptops.slice(0, 1)));
+  renderCards("relatedProducts", laptops);
+  const recommendationSplit = Math.ceil(laptops.length / 2);
+  renderCards("likeProducts", laptops.slice(recommendationSplit).concat(laptops.slice(0, recommendationSplit)));
 });
